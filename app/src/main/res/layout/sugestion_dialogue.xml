@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/feedSent"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/animate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_sent" />
+
+        <TextView
+            android:id="@+id/feedbacksent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="190dp"
+            android:gravity="center"
+            android:text="@string/sent"
+            android:textColor="@color/bg"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/closefeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feedbacksent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@color/yellow"
+            android:text="@string/okay"
+            android:textColor="@color/bg" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/feedbackBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/suggestion"
+            android:textColor="@color/bg"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/UserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/editbox"
+            android:gravity="top"
+            android:hint="@string/your_name"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+
+            />
+
+        <EditText
+            android:id="@+id/Usersuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/editbox"
+            android:gravity="top"
+            android:hint="@string/course_name"
+            android:inputType="text|textMultiLine"
+            android:padding="16dp"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/sendSuggestion"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:drawableLeft="@drawable/ic_send"
+                android:drawablePadding="3dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="Send"
+                android:textAllCaps="false"
+                android:textColor="@color/bg"
+                tools:ignore="HardcodedText,RtlHardcoded,UnusedAttribute" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
